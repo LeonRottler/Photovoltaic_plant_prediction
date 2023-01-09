@@ -13,9 +13,7 @@ import ETL.kWh_Extraction as kWh
 
 
 def update_data():
-    
-    print(os.path.dirname(os.getcwd()) + "\Data\kWh_data.txt")
-    
+      
     kWh_df = kWh.get_kWh_df((os.path.dirname(os.getcwd()) + "\Data\kWh_data.txt"))
 
     # historical weather data from https://www.dwd.de/DE/leistungen/klimadatendeutschland/klarchivtagmonat.html for station
@@ -35,4 +33,4 @@ def update_data():
     data_v2.to_csv(os.path.dirname(os.getcwd()) + "\Data\data_v2.csv")
 
 
-print(update_data())
+#print(update_data())
